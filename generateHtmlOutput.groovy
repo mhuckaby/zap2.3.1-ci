@@ -9,8 +9,8 @@ import java.io.File;
 import static org.parosproxy.paros.extension.report.ReportGenerator.fileToHtml;
 
 
-println "xml file to convert ${args[0]}" 
-println "xsl file to use in conversion ${args[1]}"
-println "html file to write ${args[2]}"
+println "xml file to convert ${args[0]}  ${new File(args[0]).exists() ? 'exists' : 'dne'}"
+println "xsl file to use in conversion ${args[1]} ${new File(args[1]).exists() ? 'exists' : 'dne'}"
+println "html file to write ${args[2]} ${new File(args[2]).exists() ? 'exists' : 'dne'}"
 
 fileToHtml(args[0], args[1], args[2]);
